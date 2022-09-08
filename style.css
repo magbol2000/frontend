@@ -1,0 +1,83 @@
+* {
+    font-family: sans-serif;
+}
+
+.full-name {
+    font-size: 27px;
+    color: #262626;
+}
+
+.job-title {
+    font-size: 16px;
+    color: #5b5b5b;
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footnote, .general-info {
+    float: left;
+    margin: 0 auto;
+    width: 49%;
+}
+
+.start-info {
+    margin-top: 30px;
+}
+
+.photo {
+    width: 50%;
+}
+
+.footnote ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.footnote ul li {
+    list-style-type: none;
+    font-size: 16px;
+    color: #3d3d3d;
+}
+
+.footnote ul li:nth-child(odd) {
+    background-color: #e5e5e5
+}
+
+main {
+    float: left;
+    width: 100%;
+    font-size: 20px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.title-info {
+    background-color: #e5e5e5;
+    overflow:hidden;
+}
+
+.sub-title {
+    font-weight: bold;
+    float: left;
+}
+
+.organization-name {
+    font-weight: bold;
+}
+
+.period {
+    float: right;
+}
+
+.describe-name {
+    font-style: italic;
+}
+
+.describe {
+
+}
