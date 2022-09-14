@@ -10,51 +10,38 @@
 <body>
     <header>
         <div class="start-info">
-<!--            в твоём случае это h1 заголовок страницы-->
-            <div class="full-name">
-<!--                это делается через text-transform: uppercase,-->
-<!--                а ты задал по сути текст аббревиатуру заглавными, так не принято,-->
-<!--                является семантической ошибкой-->
-                ВАСИН ЮРИЙ ВЛАДИМИРОВИЧ
-            </div>
-            <div class="general-info">
-                <div class="job-title">
-<!--                    и так далее везде стоит делать такое через css text-transform: uppercase-->
-                    FRONTEND-DEVELOPER
-                </div>
+            <h1 class="full-name">
+                Васин Юрий Владимирович
+            </h1>
+            <div class="columns">
+                <div class="column general-info">
+                    <div class="job-title">
+                        Frontend-Developer
+                    </div>
 
-<!--                само собой без таких alt, изображение может не прогрузится запросто при-->
-<!--                перебоее соединения, получишь такую надпись, где по сути должно отображаться-->
-<!--                а что там на картинке такого ожидалось то-->
-                <img class="photo" src="img/photo.jpg" alt="The photo is not found :(">
-            </div>
-            <div class="footnote">
-                <ul>
-                    <li>Образование: Неоконченное высшее (4 курс)</li>
-                    <li>Город: Саранск</li>
-<!--                    это делают ссылкой через href="tel:"-->
-                    <li>Телефон: +7 (996) 960-91-46</li>
-<!--                    это делают ссылкой через href="mailto:"-->
-                    <li>Email: forunivers@cryptolab.net</li>
-                </ul>
+                    <img class="photo" src="img/photo.jpg" alt="Error. The photo could not be load">
+                </div>
+                <div class="column footnote">
+                    <ul>
+                        <li class="footnote__item">Образование: Неоконченное высшее (4 курс)</li>
+                        <li class="footnote__item">Город: Саранск</li>
+                        <li class="footnote__item"><a href="tel:+7(996)960-91-46">Телефон: +7 (996) 960-91-46</a></li>
+                        <li class="footnote__item"><a href="mailto:forunivers@cryptolab.net">Email: forunivers@cryptolab.net</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
     <main>
         <h2>
-            ОПЫТ РАБОТЫ
+            Опыт Работы
         </h2>
         <div class="title-info">
-<!--            скорее всего h4 логичнее, даже класс корректный, альтернативно через dl dt dd-->
-            <div class="sub-title">DevOps</div>
+            <h3 class="title-name">DevOps</h3>
             <div class="period">01/22 – текущее время</div>
         </div>
         <div class="info-body">
-<!--            по сути любой заголовок это h1-h6 на выбор в зависимости от его положения-->
-<!--            здесь и далее все info-body одинаковые, для меня скорее важно не содержимое резюме -->
-<!--            а его различные вариации, по компоновке лейаута, таблицы, может рейтинг скиллов-->
-<!--            и прочее, иначе мой фидбек по технической части знаний будет суховат-->
-            <div class="organization-name">Codemasters</div>
+            <h4 class="organization-name">Codemasters</h4>
             <div class="describe-name">Должностные обязанности:</div>
             <div class="describe">
                 <ul>
@@ -67,11 +54,11 @@
         </div>
         <hr/>
         <div class="title-info">
-            <div class="sub-title">Олимпиадное программирование</div>
+            <h3 class="title-name">Олимпиадное программирование</h3>
             <div class="period">09/19-01/22</div>
         </div>
         <div class="info-body">
-            <div class="organization-name">Университет</div>
+            <h4 class="organization-name">Университет</h4>
             <div class="describe-name">Должностные обязанности:</div>
             <div class="describe">
                 <ul>
@@ -84,10 +71,10 @@
             </div>
         </div>
         <h2>
-            ОБРАЗОВАНИЕ
+            Образование
         </h2>
         <div class="title-info">
-            <div class="sub-title">Информатика и вычислительная техника</div>
+            <h3 class="sub-title">Информатика и вычислительная техника</h3>
             <div class="period">09/19 - текущее время</div>
         </div>
         <div class="describe-name">Краткая информация:</div>
@@ -100,10 +87,10 @@
             </ul>
         </div>
         <h2>
-            ОБЩАЯ ИНФОРМАЦИЯ
+            Общая информация
         </h2>
         <div class="title-info">
-            <div class="sub-title">Цели прохождения курса</div>
+            <h3 class="sub-title">Цели прохождения курса</h3>
         </div>
         <div class="describe">
             <ul>
@@ -114,7 +101,7 @@
         </div>
         <hr/>
         <div class="title-info">
-            <div class="sub-title">Английский язык</div>
+            <h3 class="sub-title">Английский язык</h3>
         </div>
         <div class="describe">
             <ul>
@@ -124,7 +111,7 @@
         </div>
         <hr/>
         <div class="title-info">
-            <div class="sub-title">Откуда информация о курсе</div>
+            <h3 class="sub-title">Откуда информация о курсе</h3>
         </div>
         <div class="describe">
             <ul>
@@ -132,13 +119,11 @@
             </ul>
         </div>
         <div class="title-info">
-<!--            двоеточие лишнее, причем до этого его не видел, вообще не принято в вебе у заголовков-->
-            <div class="sub-title">Ссылки:</div>
+            <h3 class="sub-title">Ссылки</h3>
         </div>
         <div class="describe">
             <ul>
-<!--                через target=_blank, т.к. ссылка внешняя-->
-                <li><a href="https://github.com/magbol2000">GitHub</a></li>
+                <li><a target=_blank href="https://github.com/magbol2000">GitHub</a></li>
             </ul>
         </div>
     </main>

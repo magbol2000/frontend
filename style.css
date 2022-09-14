@@ -1,96 +1,73 @@
-/*шрифт указывают на body, причем sans-serif является запасным*/
-/*кроме того, ты указал звёздчоку, мол применится шрифт ко всем тегам,*/
-/*от body произойдёт тот же каскад с меньшим кол-вом вычислений для браузера*/
-* {
-    font-family: sans-serif;
-}
-
-.full-name {
-    font-size: 27px;
-    color: #262626;
-}
-
-.job-title {
-    font-size: 16px;
-    color: #5b5b5b;
-}
-
 body {
+    font-family: TimesNewRoman;
     width: 70%;
     margin: 0 auto;
+    padding-top: 30px;
 }
 
-/*уже много лет как есть флексы и гриды, флоаты я бы даже сказал*/
-/*сложно встретить даже в туториалах, настолько веб продвинулся*/
-
-/*более того как и в случае с программированием ты продублировал сейчас класс,*/
-/*что не принято в css, по хорошему это стили для .column, его можно добавить на оба блока в html*/
-.footnote, .general-info {
-    float: left;
-    margin: 0 auto;
-    /*а где ещё 1+1 процент потерял?*/
-    width: 49%;
-}
-
-.start-info {
-/*    идея не очень, ты по сути задал внешний отступ у блока, который может встретиться много где,*/
-/*    по хорошему (по БЭМ например), такие отступы всегда задают либо между элементами внутри отдельного виджета (блока),*/
-/*    либо через padding у родительского блока, иначе при перекомпоновке придётся сносить все подобные стили, что*/
-/*    не приветсвтуется, лишняя работа будет*/
-    margin-top: 30px;
-}
-
-/*так не стоит делать, по той же причине что и выше я описал, ты задал виджету быть в два раза меньше
-вне зависимости от того где он окажется, а правильно такие стили иметь для разметки лейаута, скажем
-корректнее было бы иметь колонки, которые делят родителя пропорционально их кол-ву, например
-
-.columns { display: flex}
-.column { flex: 1}
-
-ну или гридами тоже самое
-ошибки в тобой написанного нет, но любой лейаут выделяется отдельно от содержимого и в этот уже лейаут помещается какое-то содержимое,
-с точки зрения кол-ва дубликатов и переиспользования мною предложенный вариант окажется удобнее*/
-.photo {
-    width: 50%;
-}
-
-.footnote ul {
-    padding-left: 0;
-    margin: 0;
-}
-
-/*а можно просто li задать определённый класс в данном случае избегая лишнего каскада*/
-/*каскад плох тем что при переопределении стилей придётся всю цепочку повторять,*/
-/*т.е. .footnote__item будет удобнее*/
-.footnote ul li {
-    list-style-type: none;
-    font-size: 16px;
-    color: #3d3d3d;
-}
-
-/*ну или следуя моей идее выше будет .footnote__item:nth-child(odd) без доп каскада*/
-.footnote ul li:nth-child(odd) {
-    background-color: #e5e5e5
-}
-
-main {
-    float: left;
-    width: 100%;
-    font-size: 20px;
+h1, h2, h3, h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 main h2 {
     text-align: center;
 }
 
+main {
+    width: 100%;
+    font-size: 20px;
+}
+
+.full-name {
+    font-size: 27px;
+    color: #262626;
+    text-transform: uppercase;
+    font-weight: unset;
+}
+
+.job-title {
+    font-size: 16px;
+    color: #5b5b5b;
+    text-transform: uppercase;
+}
+
+.columns {
+    display: flex
+}
+
+.column {
+    flex: 1
+}
+
+.photo {
+    width: 50%;
+}
+
+.column ul {
+    padding: 0px;
+    margin-top: 0px;
+    margin-button: 0px;
+}
+
+.footnote__item {
+    list-style-type: none;
+    font-size: 16px;
+    color: #3d3d3d;
+}
+
+.footnote__item:nth-child(odd) {
+    background-color: #e5e5e5
+}
+
 .title-info {
     background-color: #e5e5e5;
     overflow:hidden;
+    display: flex
 }
 
 .sub-title {
     font-weight: bold;
-    float: left;
 }
 
 .organization-name {
@@ -98,13 +75,10 @@ main h2 {
 }
 
 .period {
-    float: right;
+    margin-left: auto;
+    font-weight: unset;
 }
 
 .describe-name {
     font-style: italic;
-}
-
-.describe {
-
 }
